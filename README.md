@@ -9,5 +9,5 @@ npm or yarn
  -  npm test
 
 3. To run the API tests
- - npx playwright tes
+ - npx playwright test
 
