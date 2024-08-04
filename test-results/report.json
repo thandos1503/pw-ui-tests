@@ -1,0 +1,207 @@
+{
+  "config": {
+    "configFile": "C:\\Work\\Assessments\\playwright-web-ui-tests\\playwright.config.ts",
+    "rootDir": "C:/Work/Assessments/playwright-web-ui-tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Work/Assessments/playwright-web-ui-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Work/Assessments/playwright-web-ui-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.45.3",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\Api\\api.spec.ts",
+      "file": "tests/Api/api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "API response schema Test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 10735,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at forEach (C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts:20:19)\n    at C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts:15:12",
+                    "location": {
+                      "file": "C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts",
+                      "column": 19,
+                      "line": 20
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Item at index ${index} does not match schema`\u001b[39m\u001b[33m,\u001b[39m validate\u001b[33m.\u001b[39merrors)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     expect(valid)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   \u001b[36mconst\u001b[39m uniqueRegions \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mSet\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts",
+                        "column": 19,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Item at index ${index} does not match schema`\u001b[39m\u001b[33m,\u001b[39m validate\u001b[33m.\u001b[39merrors)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     expect(valid)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   \u001b[36mconst\u001b[39m uniqueRegions \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mSet\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at forEach (C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts:20:19)\u001b[22m\n\u001b[2m    at C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts:15:12\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Item at index 45 does not match schema [\n  {\n    instancePath: '/car',\n    schemaPath: '#/properties/car/required',\n    keyword: 'required',\n    params: { missingProperty: 'signs' },\n    message: \"must have required property 'signs'\"\n  }\n]\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-08-04T17:32:17.743Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Work\\Assessments\\playwright-web-ui-tests\\tests\\Api\\api.spec.ts",
+                    "column": 19,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "435200061262384627b0-e7eb0cc8cdd3327a494d",
+          "file": "tests/Api/api.spec.ts",
+          "line": 9,
+          "column": 5
+        },
+        {
+          "title": "Count the total number of regions listed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 2448,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Total number of regions listed: 250\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-08-04T17:32:31.661Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "435200061262384627b0-92a81a3d0ab2c2547d5e",
+          "file": "tests/Api/api.spec.ts",
+          "line": 38,
+          "column": 5
+        },
+        {
+          "title": "Validate languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 2165,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Country name \"South Africa\" found. Official languages: Republiek van Suid-Afrika, Republic of South Africa, IRiphabliki yeSewula Afrika, Rephaboliki ya Afrika-Borwa , Rephaboliki ya Afrika Borwa, IRiphabhulikhi yeNingizimu Afrika, Rephaboliki ya Aforika Borwa, Riphabliki ra Afrika Dzonga, Riphabuḽiki ya Afurika Tshipembe, IRiphabliki yaseMzantsi Afrika, IRiphabliki yaseNingizimu Afrika\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-08-04T17:32:34.129Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "435200061262384627b0-067638fe9c809f7b7082",
+          "file": "tests/Api/api.spec.ts",
+          "line": 57,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-08-04T17:32:09.406Z",
+    "duration": 26918.773999999998,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

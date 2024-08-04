@@ -1,0 +1,19 @@
+image: mcr.microsoft.com/playwright:focal
+
+stages:
+  - test
+
+variables:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+before_script:
+  - npm ci
+
+test_playwright:
+  stage: test
+  script:
+    - npx playwright install
+    - npm test
+    - npx playwright test
+
+ 
