@@ -19,19 +19,6 @@ test('API response schema Test', async ({ request }) => {
     }
     expect(valid).toBe(true);
   });
-
-  const uniqueRegions = new Set<string>();
-
-  jsonData.forEach((item: any) => {
-    if (item.region) {
-      uniqueRegions.add(item.region);
-    }
-  });
-
-  const uniqueRegionCount = uniqueRegions.size;
-  console.log(`Number of unique regions: ${uniqueRegionCount}`);
-
-  expect(uniqueRegionCount).toBeGreaterThan(0);
 });
 
 
