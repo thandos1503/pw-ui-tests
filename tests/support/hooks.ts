@@ -1,17 +1,24 @@
 import { Before, After, setDefaultTimeout } from '@cucumber/cucumber';
-import { chromium, Browser, Page } from '@playwright/test';
+import { chromium, firefox, webkit, Browser, Page } from '@playwright/test';
 
-setDefaultTimeout(120000);
+setDefaultTimeout(40000);
 
-let browser: Browser;
-let page: Page;
+let browsers: Browser[] = [];
+let pages: Page[] = [];
 
 Before(async function () {
-  browser = await chromium.launch({headless: false});
-  page = await browser.newPage();
-  (this as any).page = page;
+  const browserTypes = [chromium, firefox, webkit];
+  for (const browserType of browserTypes) {
+    const browser = await browserType.launch({ headless: false });
+    const page = await browser.newPage();
+    browsers.push(browser);
+    pages.push(page);
+    (this as any).page = page;
+  }
 });
 
 After(async function () {
-  await browser.close();
+  for (const browser of browsers) {
+    await browser.close();
+  }
 });
